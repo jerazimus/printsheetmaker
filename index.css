@@ -1,0 +1,181 @@
+:root {
+    --black: rgba(0,0,0,1);
+    --grey: rgba(0,0,0,0.2);
+    --white: rgba(255,255,255,1);
+}
+
+body {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", sans-serif;
+}
+
+input {
+    height: 25px;
+    padding: 5px;
+}
+
+textarea {
+    height: 100%;
+    padding: 5px;
+    resize: none;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 64px;
+    max-width: 760px;
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bannerText {
+    font-size: 21px;
+}
+
+.benefits {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.printButton {
+    height: 25px;
+    background-color: #18181b;
+    padding: 20px;
+    line-height: 0px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    width: fit-content;
+    min-width: 120px;
+}
+
+.printButton:hover{
+    background-color: #475569;
+}
+
+
+.card {
+    display: flex;
+    border: 8px solid var(--black);
+    border-radius: 8px;
+    padding: 5px;
+    width: 63mm;
+    height: 88mm;
+    flex-direction: column;
+    box-sizing: border-box;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 1px;
+    row-gap: 5px;
+    transition: all 0.2s;
+    transform-origin: bottom;
+    background-color: white;
+}
+
+.card:hover {
+    cursor: move;
+    transform: translateY(-5px) scaleY(1); /* Translate down 10px and scale along Y */        
+    border: 8px solid #0B99FF;
+    background-color: rgba(11, 153, 255, 0.15);
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-content{
+    display: -webkit-box;
+    line-clamp: 15;
+    -webkit-line-clamp: 15; /* Number of lines before truncating */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 100%; 
+}
+
+
+
+.ui-sortable-helper {
+    transform: translate3d(0,0,0); /* Use GPU acceleration */
+}
+
+.sortable-chosen {
+    background: #f0f0f0;
+}
+
+.sortable-ghost {
+    opacity: 0.4;
+}
+
+
+.selectForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 450px;
+    border: 1px dashed var(--black);
+    transition: all 0.2s;
+    transform-origin: bottom;
+    background-color: white;
+    cursor: pointer;
+}
+
+.selectForm:hover{
+    /* cursor: pointer; */
+    border: 1px dashed #0B99FF;
+    background-color: rgba(11, 153, 255, 0.15);
+}
+
+#fileInput {
+    position: absolute; /* Remove from normal document flow */
+    opacity: 0; /* Make it invisible */
+    height: 0; /* Remove height */
+    width: 0; /* Remove width */
+    overflow: hidden; /* Ensure no content overflow */
+    z-index: -1; /* Ensure it’s not clickable or visible */
+}
+
+
+/* Hide the button */
+#uploadButton {
+    display: none;
+}
+
+
+.sortable-placeholder {
+    border: 1px dashed #ddd;
+    background-color: #f9f9f9;
+}

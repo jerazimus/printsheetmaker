@@ -1,0 +1,58 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 63mm);
+    grid-template-rows: repeat(3, 88mm);
+    gap: 1px;
+    margin: 0 auto;
+    width: fit-content;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-top: 40px;
+    background-color: white;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.2);
+    padding: 25px;
+    border-radius: 6px;
+}
+
+@media print {
+
+    .no-print {
+        display: none;
+    }
+
+    @page {
+        size: 8.5in 11in;
+        margin: 5mm 0mm;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        width: 216mm;
+        height: 260mm;
+        background-color: var(--white);
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .grid-container {
+        margin: 0 auto;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        background-color: none;
+        padding: 0px;
+        box-shadow: none;
+        border-radius: 0px;
+    }
+
+    .card { 
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .card:nth-child(9n){
+        page-break-after: always;
+        break-after: always;
+    }
+}
