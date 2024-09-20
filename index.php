@@ -15,16 +15,18 @@
 <body>
 
 <div class="no-print">
-    <?php include 'callToAction.php' ?>
+    <?php include "callToAction.php"; ?>
 </div>
 
 <div class="no-print">
-    <?php include 'csvImporter.php' ?>
+    <?php include "csvImporter.php"; ?>
 </div>
-    
-<?php include 'cardList.php' ?>
+
+<?php include "cardList.php"; ?>
 
 <script type="text/javascript" src="main.js"></script>
 
+<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 </body>
 </html>
