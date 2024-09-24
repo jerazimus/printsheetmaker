@@ -48,11 +48,13 @@ button {
     flex-direction: column;
 }
 
+
 .banner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .bannerText {
@@ -123,7 +125,6 @@ button {
     text-overflow: ellipsis;
     height: 100%; 
 }
-
 
 
 .ui-sortable-helper {
