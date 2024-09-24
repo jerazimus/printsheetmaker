@@ -19,8 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["csv_file"])) {
     $header = fgetcsv($file);
 
     // Validate header columns
-    if ($header[1] !== "card_content") {
-      echo 'Invalid CSV header. Expected "card_title" and "card_content".';
+    if ($header[1] !== "content") {
+      echo 'Invalid CSV header. Expected "content".';
       fclose($file);
       exit();
     }
@@ -28,15 +28,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["csv_file"])) {
     // Read each row from the CSV file
     while (($row = fgetcsv($file)) !== false) {
       if (empty($row[1])) {
-        echo "Error: 'card_content is required for each card";
+        echo "Error: 'content is required for each card";
         fclose($file);
         exit();
       }
       // Map each row to the column names
       $cards[] = [
-        "card_title" => !empty($row[0]) ? $row[0] : null, //optional title  
-        "card_content" => $row[1], //required content
-        "card_art" => isset($row[2]) ? $row[2] : null // optional image
+        "title" => !empty($row[0]) ? $row[0] : null, //optional title  
+        "content" => $row[1], //required content
+        "art" => isset($row[2]) ? $row[2] : null // optional image
       ];
     }
 

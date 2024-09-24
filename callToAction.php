@@ -88,17 +88,17 @@
             </div>
             
             <div>
-                <h3>card_title</h3>
+                <h3>title</h3>
                 <p>(Optional) If any cards have this header filled in, a title will appear</p>            
             </div>
             
             <div>
-                <h3>card_content</h3>
+                <h3>content</h3>
                 <p>(Required) Every card must have content to describe what the card does. Your CSV file will not upload without one.</p>
             </div>
             
             <div>
-                <h3>card_art</h3>
+                <h3>art</h3>
                 <p>(Optional) Paste a URL in this row. If any cards have this filled, an image will appear on your card. This can only be used with valid image file types. </p>
             </div>
         </div>
