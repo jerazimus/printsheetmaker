@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let uploadButton = document.getElementById('uploadButton');
     let printButton = document.getElementById("print-button");
 
+    // console.log(selectForm, fileInput, form, uploadButton, printButton);
 
     // Print button functionality
     if (printButton) {
@@ -13,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
             window.print();
         });
     }
+
+   
 
     // Initialize Sortable.js
     function initializeSortable() {
@@ -30,6 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize Sortable when the DOM is loaded
     initializeSortable();
 
+    if (selectForm && fileInput && form && uploadButton) {
+
     // Handle file input click
     selectForm.addEventListener('click', function() {
         fileInput.click();
@@ -42,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
             uploadButton.style.display = 'none'; // Hide the upload button
         }
     });
-
 
     // Hide form box after submission
     form.addEventListener('submit', function(e) {
@@ -71,5 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
             reinitializeSortable(); // Reinitialize sortable after form is hidden
         }, 500); // Delay to ensure visibility changes are applied
     });
+}
 });
 
