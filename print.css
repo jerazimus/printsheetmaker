@@ -24,7 +24,7 @@
 @media print {
 
     .no-print {
-        display: none;
+        display: block;
     }
 
     @page {
