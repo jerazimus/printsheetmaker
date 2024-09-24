@@ -23,8 +23,12 @@
 
 @media print {
 
+    .watermark {
+        display: block !important;
+    }
+
     .no-print {
-        display: block;
+        display: none;
     }
 
     @page {
@@ -63,7 +67,4 @@
         break-after: always;
     }
 
-    .watermark {
-        display: block;
-    }
 }
